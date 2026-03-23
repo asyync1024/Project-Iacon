@@ -2,6 +2,10 @@
 
 **Project-Iacon** is a repository of scripts designed to assist users setup their system post-manual installation from the [Arch Wiki](https://wiki.archlinux.org/title/Main_page), with many useful features.
 
+# The name
+Let's talk about the name, I had chose this name because at the time of starting this project, I was watching Transformers Prime, in which Megatron wanted
+Orion Pax to complete certain decoding tasks. You can search it up if you want.
+
 ## Highlights
 
 Most options listed below can be disabled on the user's command.

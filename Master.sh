@@ -259,7 +259,7 @@ else
     echo "Skipping tweaks."
 fi
 
-# AUR helper, trizen installation procedure.
+# AUR helper, aurutils installation procedure.
 
 if [[ -z ${aur_choice} || ${aur_choice} == "y" ]]; then
     echo "Installation of aurutils begins..."
@@ -269,7 +269,7 @@ else
     echo "Not installing aurutils."
 fi
 
-cd "${dir}"/scripts/ # Getting back to the scripts directory as it got messed up while installing aurutils.
+cd "${dir}"/scripts/ # Enter scripts directory because it was messed while installing aurutils.
 
 # GPU driver installation section.
 
