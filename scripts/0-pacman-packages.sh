@@ -24,8 +24,8 @@ sudo sed -i \
     -e '/^Color$/a ILoveCandy' \
     /etc/pacman.conf
 
-echo "==> Forcing a mirror refresh and making sure the system is up to date."
-sudo pacman -Syyu
+echo "==> Making sure the system is up to date."
+sudo pacman -Syu
 
 echo "==> Installing packages."
 sudo pacman -S --needed --noconfirm nftables alsa-utils base-devel git cpupower ccache ${ananicycpporgamemode} ${linux_header}
