@@ -208,7 +208,8 @@ while true; do
                 ;;
             "i3")
                 echo "Setting to install i3... more personalised for the creator."
-                de_pkg="i3 polybar picom dunst rofi rofi-calc ly numlockx xorg-xrdb xorg-xauth xorg-xset alacritty nnn neovim xsel pacman-contrib namcap feh thunar polkit-gnome gvfs gvfs-mtp tela-circle-icon-theme-nord ark thunar-archive-plugin tumbler redshift inter-font ttf-fira-code ttf-firacode-nerd noto-fonts-emoji"
+                aur_pkgs="xfce-polkit"
+                de_pkg="i3 polybar picom dunst rofi rofi-calc ly numlockx xorg-xrdb xorg-xauth xorg-xset alacritty nnn neovim xsel pacman-contrib namcap feh thunar gvfs gvfs-mtp tela-circle-icon-theme-nord ark thunar-archive-plugin tumbler redshift inter-font ttf-fira-code ttf-firacode-nerd noto-fonts-emoji"
                 break 2
                 ;;
             *)
@@ -243,7 +244,7 @@ done
 
 # Exporting variables for child scripts to use.
 
-export dir vulkansupport gpu_drv gpu_pkg nvidia_version bootloader ext4_tweaks ext4_fast_commit de_type kdetype de_pkg
+export dir vulkansupport gpu_drv gpu_pkg nvidia_version bootloader ext4_tweaks ext4_fast_commit de_type kdetype de_pkg aur_pkgs
 
 ################ Start of the actual installation. #################
 

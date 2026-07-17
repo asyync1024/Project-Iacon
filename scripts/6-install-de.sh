@@ -31,7 +31,8 @@ elif [[ ${de_type} == "Gnome" ]]; then
 
 elif [[ ${de_type} == "i3" ]]; then
     echo "==> Installing i3."
-    sudo pacman -S --needed --noconfirm ${de_pkg}
+    aur sync ${aur_pkgs} # No need to guard this, I always use aurutils.
+    sudo pacman -S --needed --noconfirm ${de_pkg} ${aur_pkgs}
     sudo systemctl enable ly@tty1
 
 else
