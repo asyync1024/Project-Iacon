@@ -28,7 +28,7 @@ echo "==> Making sure the system is up to date."
 sudo pacman -Syu
 
 echo "==> Installing packages."
-sudo pacman -S --needed --noconfirm nftables alsa-utils base-devel git cpupower ccache ${ananicycpporgamemode} ${linux_header}
+sudo pacman -S --needed --noconfirm nftables alsa-utils base-devel git ccache ${ananicycpporgamemode} ${linux_header}
 
 echo "==> Important packages installed successfully."
 exit 0

@@ -18,10 +18,6 @@ function setup_gamemode() {
 echo "==> Setting up NTP, automatic network time setup."
 sudo timedatectl set-ntp true
 
-echo "==> Setting up cpupower for to set schedutil governor as default."
-sudo systemctl enable cpupower
-sudo sed -i "s/^#GOVERNOR.*/GOVERNOR='schedutil'/" /etc/default/cpupower-service.conf
-
 echo "Enabling ccache sloppiness optimizations this improves ccache false AND positive hits."
 ccache --set-config=sloppiness=locale,time_macros
 
