@@ -33,16 +33,14 @@ if [[ ${gpu_drv} == "nvidia" ]]; then
     install_gpu_pkg linux-firmware-nvidia
     check_and_install_vulkan
 
-    echo "==> Enabling PAT and Preserve Memory after suspend."
+    echo "==> Enabling PAT."
     sudo cp "${dir}"/config/nvidia.conf /etc/modprobe.d/nvidia.conf
-    echo "==> Enabling services required for Preserve Memory after suspend."
-    sudo systemctl enable nvidia-suspend nvidia-hibernate
-    if [[ ${de_type} == "Gnome" ]]; then
-        echo "==> Using nvidia-resume service as it's required for Gnome, Wayland."
-        sudo systemctl enable nvidia-resume
+    if [[ ${de_type} != "Gnome" ]]; then
+        echo "==> Disable nvidia-resume service as it's required for Gnome, Wayland only."
+        sudo systemctl disable nvidia-resume
     fi
 
-    echo "==> Refreshing mkinitcpio to apply nvidia PAT and Preserve VRAM after suspend."
+    echo "==> Refreshing mkinitcpio to apply nvidia PAT."
     sudo mkinitcpio -P
 
 # Nouveau section.
