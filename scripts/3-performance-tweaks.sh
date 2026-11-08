@@ -133,9 +133,6 @@ sudo cp "${dir}"/config/60-ioschedulers.rules /etc/udev/rules.d/60-ioschedulers.
 echo "==> Copying configuration to disable core dumps."
 sudo cp "${dir}"/config/50-coredump.conf /etc/sysctl.d/50-coredump.conf
 
-echo "==> Copying game compatibility vm.max_map_count tweak."
-sudo cp "${dir}"/config/80-gamecompatibility.conf /etc/sysctl.d/80-gamecompatibility.conf
-
 echo "==> Copying response time tweaks."
 sudo cp "${dir}"/config/consistent-response-time-for-gaming.conf /etc/tmpfiles.d/consistent-response-time-for-gaming.conf
 
