@@ -130,9 +130,6 @@ sudo sed -i \
 echo "==> Copying I/O Scheduler rules."
 sudo cp "${dir}"/config/60-ioschedulers.rules /etc/udev/rules.d/60-ioschedulers.rules
 
-echo "==> Copying vm.swappiness configuration."
-sudo cp "${dir}"/config/99-swappiness.conf /etc/sysctl.d/99-swappiness.conf
-
 echo "==> Copying configuration to disable core dumps."
 sudo cp "${dir}"/config/50-coredump.conf /etc/sysctl.d/50-coredump.conf
 
