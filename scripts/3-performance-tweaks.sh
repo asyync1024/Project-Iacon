@@ -7,7 +7,7 @@ root_dev=$(findmnt -n -o SOURCE /)
 home_dev=$(findmnt -n -o SOURCE /home | grep '^/dev/')
 # Find if the user uses RAID or not.
 swapdev=$(swapon --show=NAME --noheadings)
-kernel_parameters="zswap.enabled=1 zswap.max_pool_percent=35 zswap.compressor=lz4 loglevel=3 quiet"
+kernel_parameters="loglevel=3 quiet"
 
 # Backup fstab in case the system gets screwed.
 sudo cp /etc/fstab /etc/fstab.bak
