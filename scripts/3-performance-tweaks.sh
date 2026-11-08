@@ -13,11 +13,9 @@ kernel_parameters="loglevel=3 quiet"
 sudo cp /etc/fstab /etc/fstab.bak
 
 ### Mkinitcpio ###
-echo "==> Editing mkinitcpio to use systemd HOOKS and faster compression and decompression for zstd."
+echo "==> Editing mkinitcpio to use systemd HOOKS."
 sudo sed -i \
     -e '/^HOOKS=.*/ { s/base //; s/ keymap//; s/ consolefont//; s/ sd-vconsole//; s/ block/ sd-vconsole block/ }' \
-    -e '/^#COMPRESSION="zstd"/ s/#//' \
-    -e '/^#COMPRESSION_OPTIONS=.*/ { s/)$/ --auto-threads=logical)/; s/( /(/; s/#// }' \
     /etc/mkinitcpio.conf
 
 ### Insert kernel parameters. ###
